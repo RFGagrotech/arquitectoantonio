@@ -1,0 +1,236 @@
+/* ========== HERO (mobile-first) ========== */
+.hero {
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  justify-items: center;
+  padding: 144px 0 32px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.62) 0%,
+      rgba(0, 0, 0, 0.52) 45%,
+      rgba(0, 0, 0, 0.28) 80%,
+      rgba(0, 0, 0, 0.12) 100%
+    ),
+    url("../img/dormitorio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: start center;
+  text-align: center;
+  row-gap: 33px;
+
+  /* Para que p y CTA queden centrados y con ancho coherente */
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.9rem, 12vw, 4.2rem);
+    line-height: 0.95;
+    letter-spacing: 0.12em;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    text-wrap: balance;
+    transform: none;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Asegura el “ARQ” en negrita sí o sí */
+  .bold {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 900 !important;
+    letter-spacing: 0.12em;
+  }
+
+  p {
+    margin: 0;
+    max-width: 28ch;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    opacity: 0.92;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  /* CTA mailto: más ancho */
+  a[href^="mailto:"] {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(80%, 360px);
+    padding: 14px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.9);
+    background: linear-gradient(
+      135deg,
+      rgba(212, 183, 143, 0.98),
+      rgba(157, 214, 255, 0.78)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 160ms ease, filter 160ms ease;
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(157, 214, 255, 0.9);
+      outline-offset: 3px;
+    }
+  }
+
+  figure {
+    display: none;
+  }
+
+  h1, p, a[href^="mailto:"] {
+    color: #fff;
+  }
+
+  a[href^="mailto:"] {
+    color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* =====Responsive (tablet / desktop)===== */
+@media (min-width: 768px) {
+  .hero {
+    padding: 150px 24px 46px;
+    row-gap: 50px;
+
+    h1 {
+      font-size: 5.5rem;
+    }
+
+    p {
+      max-width: 48ch;
+      font-size: 3.1rem;
+    }
+  }
+
+  main section {
+    padding: 56px 24px;
+  }
+
+  #about-us {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+
+    h2 {
+      grid-column: 1 / 2;
+    }
+
+    p {
+      grid-column: 1 / 2;
+    }
+
+    picture {
+      grid-column: 2 / 3;
+      grid-row: 1 / span 6;
+
+      img {
+        height: 100%;
+        min-height: 420px;
+      }
+    }
+  }
+
+  /* Servicios: 2 columnas en tablet */
+  #servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    h2 {
+      margin-bottom: 6px;
+    }
+
+    .servicio + .servicio {
+      margin-top: 0;
+    }
+
+    /* wrapper implícito: convertimos #servicios en grid y colocamos artículos */
+    grid-auto-rows: auto;
+
+    /* Los artículos ocupan el grid debajo del h2 */
+    .servicio {
+      /* nada */
+    }
+
+    /* hack limpio: aplicamos a los artículos como items */
+    > .servicio {
+      /* nada */
+    }
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    > h2 {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* Contacto: imagen lateral */
+  #contacto {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+
+    > h2 {
+      grid-column: 1 / -1;
+    }
+
+    picture {
+      grid-column: 2 / 3;
+      grid-row: 2 / span 4;
+
+      img {
+        height: 100%;
+        min-height: 380px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 90px 24px 56px;
+
+    h1 {
+      font-size: 5rem;
+      margin-top: 3rem;
+    }
+  }
+
+  #servicios {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    .servicio figure img {
+      height: 290px;
+    }
+  }
+}
+
+/* ====Accesibilidad: reduce motion===== */
+@media (prefers-reduced-motion: reduce) {
+  .hero a,
+  #servicios .servicio,
+  #servicios .servicio figure img,
+  #contacto a {
+    transition: none !important;
+  }
+}

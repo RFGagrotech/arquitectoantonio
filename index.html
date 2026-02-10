@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pererarquitectura - Modelado 3D y renderizado</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="description" content="Arquitectura a medida" />
+
+    <!-- Uso de favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"/>
+    <script type="module" src="./src/main.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <figure class="header-logo">
+        <a href="#inicio" aria-label="Ir a inicio">
+          <img src="/img/logo.png" alt="Logo PererArquitectura" />
+        </a>
+      </figure>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="primary-nav"
+        aria-expanded="false">
+        <span class="sr-only">Abrir menú</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" data-collapsible>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#about-us">Presentación</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li>
+            <a href="https://www.instagram.com/pererarquitectura"
+              target="_blank" rel="noopener" aria-label="Instagram">
+              <img class="icon" src="/img/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <h1>PERER<span class="bold">ARQ</span></h1>
+        <p>Modelado 3D y renderizado</p>
+        <a href="mailto:antonio@pererarquitectura.es">Solicitar presupuesto</a>
+        <figure><img src="./img/dormitorio.png" alt="#" /></figure>
+      </section>
+
+      <section id="about-us">
+        <picture>
+          <img src="/img/saladeestar.png" alt="#"/>
+        </picture>
+        <h2>Sobre nosotros</h2>
+        <p>
+          PererArquitectura es un estudio independiente especializado en visualización
+          arquitectónica, con una sólida base técnica y una clara vocación visual. Trabajamos
+          con rigor arquitectónico y herramientas digitales avanzadas para crear imágenes
+          precisas, coherentes y de alta calidad.
+        </p>
+        <p>
+          No nos limitamos a representar espacios: interpretamos el proyecto desde su lógica
+          constructiva, funcional y formal, y lo traducimos en imágenes realistas y bien
+          fundamentadas. Cuidamos cada aspecto —escala, materiales, luz y atmósfera—
+          con el mismo criterio con el que se diseña arquitectura.
+        </p>
+        <p>
+          Nuestro trabajo se apoya en un entorno informático de alto rendimiento, optimizado
+          para procesos exigentes de modelado, renderizado y postproducción, lo que nos permite
+          ofrecer resultados eficientes sin renunciar al detalle.
+        </p>
+        <p>
+          Creemos que una buena imagen no es solo estética: es una herramienta de comunicación
+          clara, técnica y emocional que refuerza el valor del proyecto.
+        </p>
+      </section>
+
+      <section id="servicios">
+        <h2>Servicios</h2>
+
+        <article class="servicio">
+          <h3>Modelado 3D + Renderizado</h3>
+          <p>
+            Representación hiperrealista de espacios interiores o exteriores a partir de planos
+            o bocetos. Ideal para visualizar proyectos antes de ejecutarlos.
+          </p>
+          <figure>
+            <img src="/img/estudio.png" alt="Renderizado y modelado" />
+          </figure>
+        </article>
+
+        <article class="servicio">
+          <h3>Planimetría técnica</h3>
+          <p>
+            Planos base para anteproyectos, concursos o documentación gráfica. Representación
+            clara, limpia y profesional adaptada al uso que necesites.
+          </p>
+          <figure>
+            <img src="/img/plano.png" alt="Proyección" />
+          </figure>
+        </article>
+
+        <article class="servicio">
+          <h3>Maquetación 3D (Próximamente)</h3>
+          <p>
+            Servicio en preparación. Impresión 3D de maquetas físicas a escala de proyectos
+            arquitectónicos o de diseño.
+          </p>
+          <figure>
+            <img src="/img/impresora3D.png" alt="Impresión 3D" />
+          </figure>
+        </article>
+        <article class="servicio">
+          <h3>Apoyo técnico al proyecto</h3>
+          <p>
+              Asistencia gráfica y técnica del desarrollo del proyecto. Coordinación de
+              documentación, ajustes y verificación espacial
+          </p>
+          <figure>
+            <img src="/img/tecnico.png" alt="Dirección técnica" />
+          </figure>
+        </article>
+      </section>
+
+      <section id="contacto">
+        <picture>
+          <img src="/img/consulta1.png" alt="Contact-us"/>
+        </picture>
+        <h2>Contáctanos</h2>
+        <h3>¿Quieres hacernos alguna consulta?</h3>
+        <p>
+          Escríbenos sin compromiso y te ayudaremos a aclarar tus dudas. Puedes consultar
+          disponibilidad, precios, tiempos de entrega, documentación necesaria o resolver
+          cualquier detalle antes de empezar.
+        </p>
+        <a href="https://wa.me/34657620152" target="_blank" rel="noopener">WhatsApp</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 pererarquitectura</p>
+    </footer>
+   
+  </body>
+</html>

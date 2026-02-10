@@ -1,0 +1,190 @@
+/* ========== CONTACTO (mobile-first) ========== */
+#contacto {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  position: relative;
+  min-height: 92vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 144px 0 32px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.70) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.35) 80%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    url("../img/consulta1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* layout */
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+#contacto picture {
+  display: none;
+}
+
+#contacto h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.85rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+#contacto h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.20);
+}
+
+#contacto h3 {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 36ch;
+}
+
+#contacto p {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 42ch;
+  padding: 14px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+#contacto a[href^="https://wa.me/"] {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(86%, 380px);
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.90);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 183, 143, 0.98),
+    rgba(157, 214, 255, 0.78)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+#contacto a[href^="https://wa.me/"]:active {
+  transform: translateY(1px);
+}
+
+#contacto a[href^="https://wa.me/"]:focus-visible {
+  outline: 2px solid rgba(157, 214, 255, 0.9);
+  outline-offset: 3px;
+}
+
+#contacto::after {
+  content: "";
+  display: block;
+  height: 16px;
+}
+
+footer {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 18px 16px 26px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(0, 0, 0, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer p {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #contacto a[href^="https://wa.me/"] {
+    transition: none !important;
+  }
+}
+
+/*=====Ipad=====*/
+@media (min-width: 768px) and (max-width: 1024px) {
+#contacto {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-areas: 
+"h2"
+"h3"
+"p"
+"a";
+row-gap: 40px;
+}
+  #contacto h2 {
+    grid-area: h2;
+    font-size: 5rem;
+  }
+
+  #contacto h3 {
+    grid-area:h3;
+    font-size: 1.5rem;
+  }
+  
+  #contacto a {
+    grid-area: a;
+  }
+}
+
+@media (min-width:1025px) {
+#contacto {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-areas: 
+"h2"
+"h3"
+"p"
+"a";
+row-gap: 50px;
+}
+  #contacto h2 {
+    grid-area: h2;
+    font-size: 5.2rem;
+  }
+
+  #contacto h3 {
+    grid-area:h3;
+    font-size: 1.5rem;
+  }
+  
+  #contacto a {
+    grid-area: a;
+  }
+}
